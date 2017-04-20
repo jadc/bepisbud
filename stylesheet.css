@@ -1,0 +1,41 @@
+.jumbotron img {
+  float: left;
+  width: 132px;
+  margin-left: 10%;
+}
+
+pre {
+  margin-top: 5px;
+}
+
+.text-muted {
+  margin-top: 10px;
+}
+
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.glyphicon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .jumbotron img {
+    display: none;
+  }
+
+  .jumbotron p {
+    display: none;
+  }
+
+  .jumbotron h1 {
+    text-align: center;
+    font-size: 300%;
+  }
+}
