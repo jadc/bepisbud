@@ -171,7 +171,7 @@ var writeFile = function(){
   var script = [
     "--[[",
     " MISCELLANEOUS: Generated using bepis bud, by Jad C.",
-    " CONTACT: If there is any errors with THE GENERATOR, bepis bud, contact Jad at chehimj@gmail.com.",
+    " CONTACT: If there is any errors with THE GENERATOR, contact Jad on Discord. jad#0875",
     " AUTHOR: Carrot#3803, John#2404 and Bitl",
     " WRITTEN ON: 4/16/2017 @ 8:23 PM CST",
     " GENERATED ON: " + today,
