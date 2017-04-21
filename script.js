@@ -18,6 +18,10 @@ var save = function(arg){
   var theshirt = $("#shirt").val();
   var thepants = $("#pants").val();
   var thehats = $("#hats").val();
+
+  var theface = $("#face").val();
+  var thehead = $("#head").val();
+
   var thehatversion = $("#hatversion").val();
   //////////////////////////
   switch(arg){
@@ -34,6 +38,10 @@ var save = function(arg){
       $("#shirt").val(Cookies.get("shirt"));
       $("#pants").val(Cookies.get("pants"));
       $("#hats").val(Cookies.get("hats"));
+
+      $("#face").val(Cookies.get("face"));
+      $("#head").val(Cookies.get("head"));
+
       $("#hatversion").val(Cookies.get("hatversion"));
 
       break;
@@ -76,6 +84,16 @@ var save = function(arg){
       case "hats":
       Cookies.set("hats", thehats)
       alert("Saved input for the hats (\"" + Cookies.get("hats") + "\") to cookies.")
+      break;
+
+      case "face":
+      Cookies.set("face", theface)
+      alert("Saved input for the face (\"" + Cookies.get("face") + "\") to cookies.")
+      break;
+
+      case "head":
+      Cookies.set("head", theface)
+      alert("Saved input for the head (\"" + Cookies.get("head") + "\") to cookies.")
       break;
 
       case "hatversion":
@@ -131,9 +149,21 @@ var saveClick = function(){
     save("hats");
   });
 
+  $("#saveface").click(function(){
+    save("face");
+  });
+
+  $("#savehead").click(function(){
+    save("head");
+  });
+
+
+
   $("#savehatversion").click(function(){
     save("hatversion");
   });
+
+
 }
 var today = new Date();
 var writeFile = function(){
@@ -172,6 +202,8 @@ var writeFile = function(){
     "local shirt = \"" + $("#shirt").val() + "\" -- Put in a Shirt asset ID https://www.roblox.com/catalog/",
     "local pants = \"" + $("#pants").val() +"\" -- Put in a Pants asset ID https://www.roblox.com/catalog/",
     "local hats = {" + $("#hats").val() +"} -- Put in a Hat asset ID https://www.roblox.com/catalog/ | Maximum is 5 hats. Having more than 5 is not recommended, as your character can be fidgity.",
+    "local face = \"" + $("#face").val() +"\"",
+    "local head = \"" + $("#head").val() +"\"",
     "local hatversion = " + $("#hatversion").val() +" -- If some hats do not load, change this to 2.",
     "local charapp = \"\" -- Do not edit this!",
     "",
@@ -193,6 +225,14 @@ var writeFile = function(){
     "",
     "if tshirt ~= \"\" then",
     "charapp = charapp .. \"http://www.roblox.com/asset?id=\" .. tshirt .. \";\"",
+    "end",
+    "",
+    "if face ~= \"\" then",
+    "charapp = charapp .. \"http://www.roblox.com/asset?id=\" .. face .. \";\"",
+    "end",
+    "",
+    "if head ~= \"\" then",
+    "charapp = charapp .. \"http://www.roblox.com/asset?id=\" .. head .. \";\"",
     "end",
     "",
     "if #hats > 0 then",
