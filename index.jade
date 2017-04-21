@@ -3,10 +3,11 @@ doctype html
 
 html
   head
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css")
+    link(rel="stylsheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet" href="stylesheet.css")
+    
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
     script(src="js.cookie.js")
     script(src="script.js")
   body
@@ -15,56 +16,68 @@ html
         img(src="b.png")
         h1 &nbsp;bepis bud
         p.text-muted &nbsp;&nbsp;&nbsp;a gui to create server script files to be used in <a href="http://bepistown.cf">bepistown</a>
+    br
+    br
     main
       .form-group
         label(for="ip") IP Address 
-        span(class="glyphicon glyphicon-save" id="saveip")
+        div(class="icon" id="saveip")
         input(type="text" required="true" placeholder="127.0.0.1" class="form-control" id="ip")
         
       
       .form-group
         label(for="port") Port
-        span(class="glyphicon glyphicon-save" id="saveport")
+        div(class="icon" id="saveport")
         input(type="text" required="true" placeholder="53640" class="form-control" id="port")
         
       
       .form-group
         label(for="name") Username
-        span(class="glyphicon glyphicon-save" id="saveusername")
+        div(class="icon" id="saveusername")
         input(type="text" placeholder="Player" class="form-control" id="name")
         
       .form-group
         label(for="bodycolours") Body Colours
-        span(class="glyphicon glyphicon-save" id="savebodycolours")
+        div(class="icon" id="savebodycolours")
         input(type="text" placeholder="Do not edit unless you know what you're doing! The entire url (including the hash) goes here." class="form-control" id="bodycolours")
-        pre.text-info Open up: http://www.roblox.com/Asset/CharacterFetch.ashx?userId=<br />At the end of ?userID=, replace the userID with someone (on roblox.com)'s user id. <br />Then, open the page and you should see a url. Copy it, and inside "local bodycolors = """, inside "" put the url.
+        pre Open up: http://www.roblox.com/Asset/CharacterFetch.ashx?userId=<br />At the end of ?userID=, replace the userID with someone (on roblox.com)'s user id. <br />Then, open the page and you should see a url. Copy it, and inside "local bodycolors = """, inside "" put the url.
         
       .form-group
         label(for="tshirt") T-Shirt
-        span(class="glyphicon glyphicon-save" id="savetshirt")
+        div(class="icon" id="savetshirt")
         input(type="text" placeholder="Put in a T-Shirt asset ID from https://www.roblox.com/catalog/" class="form-control" id="tshirt")
       
       .form-group
         label(for="shirt") Shirt
-        span(class="glyphicon glyphicon-save" id="saveshirt")
+        div(class="icon" id="saveshirt")
         input(type="text" placeholder="Put in a Shirt asset ID https://www.roblox.com/catalog/" class="form-control" id="shirt")
       
       .form-group
         label(for="pants") Pants
-        span(class="glyphicon glyphicon-save" id="savepants")
+        div(class="icon" id="savepants")
         input(type="text" placeholder="Put in a Pants asset ID https://www.roblox.com/catalog/" class="form-control" id="pants")
           
       .form-group
         label(for="hats") Hats
-        span(class="glyphicon glyphicon-save" id="savehats")
+        div(class="icon" id="savehats")
         input(type="text" placeholder="Put in a Hat asset ID https://www.roblox.com/catalog/ Recommended maximum is 5 hats." class="form-control" id="hats")
-        pre.text-info Put the hat ID between quotes, if there are multiple hats, seperate them with a comma.<br />Example for one hat: "123456"<br />Example for multiple: "123456","654321","112233"
+        pre Put the hat ID between quotes, if there are multiple hats, seperate them with a comma.<br />Example for one hat: "123456"<br />Example for multiple: "123456","654321","112233"
+        
+      .form-group
+        label(for="face") Face
+        div(class="icon" id="saveface")
+        input(type="text" placeholder="Put in asset id of face." class="form-control" id="face")
+      
+      .form-group
+        label(for="head") Head
+        div(class="icon" id="savehead")
+        input(type="text" placeholder="Put in asset id of head." class="form-control" id="head")
         
       .form-group
         label(for="hatversion") Hat Version
-        span(class="glyphicon glyphicon-save" id="savehatversion")
+        div(class="icon" id="savehatversion")
         input(type="text" required="true" value=1 class="form-control" id="hatversion")
-        pre.text-info Input 1 into here. If some hats do not load, change this to 2.
+        pre Input 1 into here. If some hats do not load, change this to 2.
         
-      .btn.btn-primary.btn-lg#generate Generate
+      .btn.btn-primary.btn-large#generate Generate
       
