@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylsheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="js.cookie.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron"><img src="b.png">
+        <h1>&nbsp;bepis bud</h1>
+        <p class="text-muted">&nbsp;&nbsp;&nbsp;a gui to create server script files to be used in <a href="http://bepistown.cf">bepistown</a></p>
+      </div>
+    </header><br><br>
+    <main>
+      <div class="form-group">
+        <label for="ip">IP Address </label>
+        <div id="saveip" class="icon"></div>
+        <input type="text" required="true" placeholder="127.0.0.1" id="ip" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="port">Port</label>
+        <div id="saveport" class="icon"></div>
+        <input type="text" required="true" placeholder="53640" id="port" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="name">Username</label>
+        <div id="saveusername" class="icon"></div>
+        <input type="text" placeholder="Player" id="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="bodycolours">Body Colours</label>
+        <div id="savebodycolours" class="icon"></div>
+        <input type="text" placeholder="Do not edit unless you know what you're doing! The entire url (including the hash) goes here." id="bodycolours" class="form-control">
+        <pre>Open up: http://www.roblox.com/Asset/CharacterFetch.ashx?userId=<br />At the end of ?userID=, replace the userID with someone (on roblox.com)'s user id. <br />Then, open the page and you should see a url. Copy it, and inside "local bodycolors = """, inside "" put the url.</pre>
+      </div>
+      <div class="form-group">
+        <label for="tshirt">T-Shirt</label>
+        <div id="savetshirt" class="icon"></div>
+        <input type="text" placeholder="Put in a T-Shirt asset ID from https://www.roblox.com/catalog/" id="tshirt" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="shirt">Shirt</label>
+        <div id="saveshirt" class="icon"></div>
+        <input type="text" placeholder="Put in a Shirt asset ID https://www.roblox.com/catalog/" id="shirt" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="pants">Pants</label>
+        <div id="savepants" class="icon"></div>
+        <input type="text" placeholder="Put in a Pants asset ID https://www.roblox.com/catalog/" id="pants" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="hats">Hats</label>
+        <div id="savehats" class="icon"></div>
+        <input type="text" placeholder="Put in a Hat asset ID https://www.roblox.com/catalog/ Recommended maximum is 5 hats." id="hats" class="form-control">
+        <pre>Put the hat ID between quotes, if there are multiple hats, seperate them with a comma.<br />Example for one hat: "123456"<br />Example for multiple: "123456","654321","112233"</pre>
+      </div>
+      <div class="form-group">
+        <label for="face">Face</label>
+        <div id="saveface" class="icon"></div>
+        <input type="text" placeholder="Put in asset id of face." id="face" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="head">Head</label>
+        <div id="savehead" class="icon"></div>
+        <input type="text" placeholder="Put in asset id of head." id="head" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="hatversion">Hat Version</label>
+        <div id="savehatversion" class="icon"></div>
+        <input type="text" required="true" value="1" id="hatversion" class="form-control">
+        <pre>Input 1 into here. If some hats do not load, change this to 2.</pre>
+      </div>
+      <div id="generate" class="btn btn-primary btn-large">Generate</div>
+    </main>
+  </body>
+</html>
